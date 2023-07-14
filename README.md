@@ -21,4 +21,4 @@ jobs:
     uses: bjerkio/workflows/.github/workflows/pnpm-typical.yml@v1
 ```
 
-See [pnpm-typical.yml](pnpm-typical.yml) for more details.
+See [pnpm-typical.yml](.github/workflows/pnpm-typical.yml) for more details.
