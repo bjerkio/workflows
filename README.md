@@ -18,7 +18,7 @@ on:
 jobs:
   typical-workflow:
     name: Lint, format, test and build
-    uses: bjerkio/workflows/pnpm-typical@v1
+    uses: bjerkio/workflows/.github/workflows/pnpm-typical.yml@v1
 ```
 
 See [pnpm-typical.yml](pnpm-typical.yml) for more details.

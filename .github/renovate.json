@@ -2,11 +2,5 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
   "lockFileMaintenance": { "enabled": true, "automerge": true },
-  "rangeStrategy": "replace",
-  "github-actions": {
-    "fileMatch": [
-      "[^/]+\\.ya?ml$",
-      "^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"
-    ]
-  }
+  "rangeStrategy": "replace"
 }
