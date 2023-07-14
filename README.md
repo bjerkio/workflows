@@ -5,7 +5,7 @@ Reuseable GitHub Actions Workflows
 ## Typical workflow for `pnpm` projects
 
 ```yaml
-name: Workflow
+name: On Push
 
 on:
   push:
