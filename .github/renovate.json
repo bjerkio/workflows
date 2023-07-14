@@ -4,6 +4,9 @@
   "lockFileMaintenance": { "enabled": true, "automerge": true },
   "rangeStrategy": "replace",
   "github-actions": {
-    "fileMatch": ["[^/]+\\.ya?ml$"]
+    "fileMatch": [
+      "[^/]+\\.ya?ml$",
+      "^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"
+    ]
   }
 }
