@@ -26,13 +26,6 @@ jobs:
           node-version: ${{ inputs.node-version }}
           cache: pnpm
 
-      - name: Use Node ${{ github.event.inputs.node-version }}} ✨
-        if: ${{ github.event.inputs.node-version != 'use-engines' }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ github.event.inputs.node-version }}}
-          cache: pnpm
-
       - name: Install dependencies 📦️
         run: pnpm install --frozen-lockfile
 
