@@ -1,0 +1,16 @@
+name: Test Action
+
+on:
+  push:
+    branches:
+      - simenandre/fix-use-engines
+
+jobs:
+  typical-workflow:
+    name: Test
+    uses: ./.github/workflows/pnpm-typical.yml
+  typical-workflow-use-engine:
+    name: Test with use-engine
+    uses: ./.github/workflows/pnpm-typical.yml
+    with:
+      use-engines: true
