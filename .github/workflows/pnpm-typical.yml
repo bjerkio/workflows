@@ -28,7 +28,7 @@ jobs:
 
       - name: Find Node version to use 🧐
         run: |
-          if [ '${{ inputs.node-version }}' == 'use-engines' ]; then
+          if [ '${{ inputs.use-engines }}' == 'true' ]; then
             echo "Using Node version from package.json"
             echo "version=$(node -p "require('./package.json').engines.node")" >> $GITHUB_OUTPUT
           else
