@@ -13,4 +13,4 @@ jobs:
     name: Test with use-engine
     uses: ./.github/workflows/pnpm-typical.yml
     with:
-      node-version: use-engine
+      use-engines: true

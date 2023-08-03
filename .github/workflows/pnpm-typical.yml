@@ -3,6 +3,11 @@ name: Pnpm Typical
 on:
   workflow_call:
     inputs:
+      use-engines:
+        type: boolean
+        description: 'Use Node version from package.json'
+        required: false
+        default: false
       node-version:
         type: string
         description: 'Node version. Defaults to active LTS.'
