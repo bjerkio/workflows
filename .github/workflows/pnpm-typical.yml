@@ -20,16 +20,10 @@ jobs:
 
       - uses: pnpm/action-setup@v2
 
-      - name: Read Node.js version from package.json 📦️
-        if: ${{ github.event.inputs.node-version == 'use-engines' }}
-        run: echo ::set-output name=nodeVersion::$(node -p "require('./package.json').engines.node")
-        id: engines
-
       - name: Use Node LTS ✨
-        if: ${{ github.event.inputs.node-version == 'use-engines' }}
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ steps.engines.outputs.nodeVersion }}
+          node-version: ${{ inputs.node-version }}
           cache: pnpm
 
       - name: Use Node ${{ github.event.inputs.node-version }}} ✨
