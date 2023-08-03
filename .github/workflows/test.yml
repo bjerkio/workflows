@@ -1,0 +1,11 @@
+name: Test Action
+
+on:
+  push:
+    branches:
+      - simenandre/fix-use-engines
+
+jobs:
+  typical-workflow:
+    name: Lint, format, test and build
+    uses: ./.github/workflows/pnpm-typical.yml
