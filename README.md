@@ -21,4 +21,6 @@ jobs:
     uses: bjerkio/workflows/.github/workflows/pnpm-typical.yml@v1
 ```
 
+You can set `node-version` to `use-engines` to use `"engines"` from `package.json`.
+
 See [pnpm-typical.yml](.github/workflows/pnpm-typical.yml) for more details.
