@@ -1,4 +1,4 @@
-name: Pnpm Typical
+name: PNPM Typical
 
 on:
   workflow_call:
