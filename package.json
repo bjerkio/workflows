@@ -1,5 +1,6 @@
 {
   "name": "test-project",
+  "description": "This is not used by the workflow, it's only used for testing",
   "version": "1.0.0",
   "packageManager": "pnpm@8.6.11",
   "engines": {
