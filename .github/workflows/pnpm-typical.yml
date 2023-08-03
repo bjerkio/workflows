@@ -2,6 +2,12 @@ name: Pnpm Typical
 
 on:
   workflow_call:
+    inputs:
+      node-version:
+        type: string
+        description: 'Node version. Defaults to active LTS.'
+        required: false
+        default: 'lts/*'
 
 jobs:
   build:
@@ -17,7 +23,7 @@ jobs:
       - name: Use Node LTS ✨
         uses: actions/setup-node@v3
         with:
-          node-version: lts/*
+          node-version: ${{ github.event.inputs.node-version }}}
           cache: pnpm
 
       - name: Install dependencies 📦️
