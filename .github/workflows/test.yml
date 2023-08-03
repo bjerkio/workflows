@@ -3,7 +3,7 @@ name: Test Action
 on:
   push:
     branches:
-      - simenandre/fix-use-engines
+      - main
 
 jobs:
   typical-workflow:
