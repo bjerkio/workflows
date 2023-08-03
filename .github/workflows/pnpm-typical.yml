@@ -43,13 +43,13 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build 🔨
-        run: pnpm build
+        run: pnpm run --if-present build
 
       - name: Lint 🔍
-        run: pnpm lint
+        run: pnpm run --if-present lint
 
       - name: Format 🖌️
-        run: pnpm format
+        run: pnpm run --if-present format
 
       - name: Test 🧪
-        run: pnpm test
+        run: pnpm run --if-present test
