@@ -3,6 +3,11 @@ name: Pnpm Typical
 on:
   workflow_call:
     inputs:
+      working-directory:
+        type: string
+        description: 'Working directory'
+        required: false
+        default: '.'
       node-version:
         type: string
         description: 'Node version. Defaults to active LTS.'
@@ -41,15 +46,20 @@ jobs:
 
       - name: Install dependencies 📦️
         run: pnpm install --frozen-lockfile
+        working-directory: ${{ github.event.inputs.working-directory }}
 
       - name: Build 🔨
         run: pnpm build
+        working-directory: ${{ github.event.inputs.working-directory }}
 
       - name: Lint 🔍
         run: pnpm lint
+        working-directory: ${{ github.event.inputs.working-directory }}
 
       - name: Format 🖌️
         run: pnpm format
+        working-directory: ${{ github.event.inputs.working-directory }}
 
       - name: Test 🧪
         run: pnpm test
+        working-directory: ${{ github.event.inputs.working-directory }}

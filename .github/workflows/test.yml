@@ -9,3 +9,11 @@ jobs:
   typical-workflow:
     name: Lint, format, test and build
     uses: ./.github/workflows/pnpm-typical.yml
+    with:
+      working-directory: example
+  typical-workflow-use-engine:
+    name: Lint, format, test and build
+    uses: ./.github/workflows/pnpm-typical.yml
+    with:
+      working-directory: example
+      node-version: use-engine
