@@ -13,11 +13,17 @@ on:
         description: 'Node version. Defaults to active LTS.'
         required: false
         default: lts/*
+      timeout-minutes:
+        type: number
+        description: 'Timeout in minutes for the workflow run. Defaults to 30.'
+        required: false
+        default: 30
 
 jobs:
   build:
     name: Lint, format, test and build
     runs-on: ubuntu-latest
+    timeout-minutes: ${{ inputs.timeout-minutes }}
 
     steps:
       - name: Checkout 🛎️
