@@ -18,7 +18,7 @@ on:
 jobs:
   typical-workflow:
     name: Lint, format, test and build
-    uses: bjerkio/workflows/.github/workflows/pnpm-typical.yml@v1
+    uses: bjerkio/workflows/.github/workflows/pnpm-typical.yml@v2
 ```
 
 You can set `use-engines: true` to use `"engines"` from `package.json` for Node version.
