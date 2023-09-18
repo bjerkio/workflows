@@ -8,13 +8,13 @@ on:
 
 jobs:
   typical-pnpm-workflow:
-    name: Test
+    name: Test with pnpm
     uses: ./.github/workflows/pnpm-typical.yml
-  typical-bun-workflow:
-    name: Test
-    uses: ./.github/workflows/bun-typical.yml
   typical-pnpm-workflow-use-engine:
-    name: Test with use-engine
+    name: Test pnpm with use-engine
     uses: ./.github/workflows/pnpm-typical.yml
     with:
       use-engines: true
+  typical-bun-workflow:
+    name: Test with bun
+    uses: ./.github/workflows/bun-typical.yml
