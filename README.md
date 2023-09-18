@@ -41,7 +41,7 @@ on:
 jobs:
   typical-workflow:
     name: Lint, format, test and build
-    uses: bjerkio/workflows/.github/workflows/bun-typical.yml@v1
+    uses: bjerkio/workflows/.github/workflows/bun-typical.yml@v2
 ```
 
 See [bun-typical.yml](.github/workflows/bun-typical.yml) for more details.
