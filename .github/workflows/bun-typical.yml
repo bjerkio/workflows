@@ -1,0 +1,45 @@
+name: Bun Typical
+
+on:
+  workflow_call:
+    inputs:
+      bun-version:
+        type: string
+        description: 'The version of Bun to download and install.'
+        required: false
+        default: latest
+      timeout-minutes:
+        type: number
+        description: 'Timeout in minutes for the workflow run. Defaults to 30.'
+        required: false
+        default: 30
+
+jobs:
+  build:
+    name: Lint, format, test and build
+    runs-on: ubuntu-latest
+    timeout-minutes: ${{ inputs.timeout-minutes }}
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup pnpm 📦️
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: ${{ inputs.bun-version }}
+
+      - name: Install dependencies 📦️
+        run: bun install --frozen-lockfile
+
+      - name: Build 🔨
+        run: bun run build
+
+      - name: Lint 🔍
+        run: bun run lint
+
+      - name: Format 🖌️
+        run: bun run format
+
+      - name: Test 🧪
+        run: bun run test
