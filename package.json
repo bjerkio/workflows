@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "packageManager": "pnpm@8.7.6",
   "engines": {
-    "node": "18.17.1"
+    "node": "20.18.0"
   },
   "scripts": {
     "build": "echo 'not implemented'; exit 0;",
