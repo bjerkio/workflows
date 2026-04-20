@@ -44,7 +44,7 @@ jobs:
         id: find-node-version
 
       - name: Setup Node ✨
-        uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d # v3
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
           node-version: ${{ steps.find-node-version.outputs.version }}
           cache: pnpm
